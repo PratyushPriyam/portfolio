@@ -129,6 +129,33 @@ body
     }
 }
 
+.wavy span
+{
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    color: #FF3131;
+    text-transform: uppercase;
+    animation: animate_text 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate_text
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-2px);
+    }
+    40%, 100%
+    {
+        transform: translateY(0px);
+    }
+}
+
 @media (min-width:500px) and (max-width: 1000px)
 {
     #box2
