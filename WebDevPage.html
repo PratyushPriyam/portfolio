@@ -9,6 +9,73 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     </head>
     <body>
+        <div class="container">
+            <div class="image fade"><!--Adding two class names to the div. Namses with space in between are diff. class names-->
+                <img src="Web_Dev/1.png" alt="Random Hex COlor Generator" width="100%">
+            </div>
+            
+            <div class="image fade"><!--Adding two class names to the div. Namses with space in between are diff. class names-->
+                <img src="Web_Dev/2.png" alt="Vaccine Registration Website" width="100%">
+            </div>
+            
+            <div class="image fade"><!--Adding two class names to the div. Namses with space in between are diff. class names-->
+                <img src="Web_Dev/3.png" alt="Multiplication Game" width="100%">
+            </div>
+            
+            <div class="image fade"><!--Adding two class names to the div. Namses with space in between are diff. class names-->
+                <img src="Web_Dev/4.png" alt="Calculator Website" width="100%">
+            </div>
+            
+            <div class="image fade"><!--Adding two class names to the div. Namses with space in between are diff. class names-->
+                <img src="Web_Dev/5.png" alt="Random Quote Generator" width="100%">
+            </div>
+            
+            
+            <i class="fas fa-angle-double-left" onclick="show_image(-1)" id="prev"></i>
+            
+            <i class="fas fa-angle-double-right" onclick="show_image(1)" id="next"></i>
+            
+            
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
         
+        
+        
+        
+        <script>
+            var index = 0;
+            
+            show_image(index);
+            
+            function show_image(i)
+            {
+                index += i;
+                
+                var images = document.getElementsByClassName("image");
+                
+                var dots = document.getElementsByClassName("dot");
+                
+                for(i=0; i<images.length; i++)
+                    images[i].style.display = "none";
+                
+                for(i=0; i<dots.length; i++)
+                    dots[i].className = dots[i].className.replace(" active", "");
+                
+                if(index > images.length - 1)
+                    index = 0;
+                
+                if(index < 0)
+                    index = images.length - 1;
+                
+                images[index].style.display = "block";
+                dots[index].className += " active";
+            }
+        </script>
     </body>
 </html>
