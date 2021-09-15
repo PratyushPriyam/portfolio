@@ -352,3 +352,11 @@ body
     from{opacity: 0.4}
     to{opacity: 1}
 }
+
+@media (max-width: 450px)
+{
+    .container
+    {
+        width: 95%;
+    }
+}
