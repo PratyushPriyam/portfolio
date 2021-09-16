@@ -389,6 +389,7 @@ h2
     color:  #000000;
     letter-spacing: 5px;
     cursor: pointer;
+    user-select: none;
 }
 
 h2 span
