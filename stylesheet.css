@@ -433,6 +433,7 @@ h3
     font-size: 3rem;
     -webkit-text-stroke: 0.3vw #383d52;
     font-family: monospace;
+    user-select: none;
 }
 
 h3:before
